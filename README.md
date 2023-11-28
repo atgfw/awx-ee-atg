@@ -1,6 +1,6 @@
-# AWX EE
+# AWX EE ATG
 
-The default Execution Environment for AWX.
+The default Execution Environment for AWX with Extras for opensense and node scripts.
 
 ## Build the image locally
 
