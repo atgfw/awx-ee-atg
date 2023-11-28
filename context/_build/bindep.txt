@@ -1,0 +1,2 @@
+git-core [platform:rpm]
+nodejs [platform:rpm]
