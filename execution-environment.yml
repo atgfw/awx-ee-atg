@@ -7,6 +7,6 @@ dependencies:
       - name: awx.awx
   system: |
     git-core [platform:rpm]
-    nodejs [platform:rpm]
+    nodejs:20 [platform:rpm]
   python: |
     httpx
