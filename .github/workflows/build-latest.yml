@@ -51,7 +51,7 @@ jobs:
         env:
           DOCKER_BUILDKIT: 1
         run: |
-          ansible-builder create -c . --container-runtime docker
+          ansible-builder create -c .
       - name: Get directory
         run: ls /home/runner/work/awx-ee-atg/awx-ee-atg
       # This step uses the `docker/build-push-action` action to build the image, based on your repository's `Dockerfile`. If the build succeeds, it pushes the image to GitHub Packages.
