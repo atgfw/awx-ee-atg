@@ -7,6 +7,11 @@ dependencies:
       - name: awx.awx
   system: |
     git-core [platform:rpm]
-    nodejs >= 20 [platform:rpm]
   python: |
     httpx
+
+additional_build_steps:
+  prepend_base:
+    - RUN echo This is a prepend base command!
+    # Enable Non-default stream before packages provided by it can be installed. (optional)
+    - RUN dnf module install nodejs:20 -y
