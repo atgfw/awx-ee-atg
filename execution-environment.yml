@@ -44,3 +44,4 @@ additional_build_steps:
     - RUN echo This is a prepend base command!
     # Enable Non-default stream before packages provided by it can be installed. (optional)
     - RUN dnf module install nodejs:20 -y
+    - RUN pip install ansible
