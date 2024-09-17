@@ -9,6 +9,7 @@ dependencies:
     git-core [platform:rpm]
   python: |
     httpx
+    ansible
 
 additional_build_steps:
   prepend_base:
