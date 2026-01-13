@@ -41,6 +41,8 @@ dependencies:
     httpx
     pynetbox
     ansible
+    lxml
+    jmespath
 
 additional_build_steps:
   prepend_base:
