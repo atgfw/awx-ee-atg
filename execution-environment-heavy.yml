@@ -88,6 +88,7 @@ dependencies:
     lxml
     jmespath
     playwright
+    paramiko
 
 additional_build_steps:
   prepend_base:
@@ -95,5 +96,6 @@ additional_build_steps:
     # Enable Non-default stream before packages provided by it can be installed. (optional)
     - RUN dnf module install nodejs:20 -y
   append_final:
-    # Install Playwright browsers (deps already installed via system packages above)
-    - RUN playwright install chromium
+    # Install Playwright browsers to a shared location (not user-specific cache)
+    - ENV PLAYWRIGHT_BROWSERS_PATH=/opt/playwright-browsers
+    - RUN mkdir -p /opt/playwright-browsers && playwright install chromium && chmod -R 755 /opt/playwright-browsers
