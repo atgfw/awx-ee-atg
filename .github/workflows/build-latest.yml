@@ -52,7 +52,7 @@ jobs:
         env:
           DOCKER_BUILDKIT: 1
         run: |
-          ansible-builder create --output-filename Dockerfile --context context_base -c execution-environment.yml
+          ansible-builder create --output-filename Dockerfile --context context_base --file execution-environment.yml
 
       - name: Build and Push Base Image
         uses: docker/build-push-action@v5
@@ -67,7 +67,7 @@ jobs:
         env:
           DOCKER_BUILDKIT: 1
         run: |
-          ansible-builder create --output-filename Dockerfile --context context_heavy -c execution-environment-heavy.yml
+          ansible-builder create --output-filename Dockerfile --context context_heavy --file execution-environment-heavy.yml
 
       - name: Build and Push Heavy Image
         uses: docker/build-push-action@v5
