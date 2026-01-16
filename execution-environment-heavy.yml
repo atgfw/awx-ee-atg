@@ -95,5 +95,5 @@ additional_build_steps:
     # Enable Non-default stream before packages provided by it can be installed. (optional)
     - RUN dnf module install nodejs:20 -y
   append_final:
-    # Install Playwright browsers after all dependencies are in place
-    - RUN playwright install --with-deps chromium
+    # Install Playwright browsers (deps already installed via system packages above)
+    - RUN playwright install chromium
