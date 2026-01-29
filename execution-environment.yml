@@ -18,6 +18,8 @@ dependencies:
       - name: awx.awx
       - name: netbox.netbox
       - name: ansibleguy.opnsense
+      - name: community.general
+      - name: ansible.utils
   system: |
     git-core [platform:rpm]
     python3.11-devel [platform:rpm compile]
