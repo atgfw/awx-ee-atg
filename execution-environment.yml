@@ -43,6 +43,7 @@ dependencies:
     ansible
     lxml
     jmespath
+    netaddr
 
 additional_build_steps:
   prepend_base:
